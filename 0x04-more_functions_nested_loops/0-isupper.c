@@ -5,7 +5,7 @@
   * Return: return 1 if uppercase or 0
   * otherwise
   *
-  * @c - parameter that receives the data passed
+  * @c: parameter that receives the data passed
   */
 int _isupper(int c)
 {
