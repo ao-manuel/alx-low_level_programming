@@ -13,23 +13,17 @@ int main(int argc, char **argv)
 	int i, toInt;
 	int sum = 0;
 
-	if (argc < 2)
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n", sum);
-	}
-	else
-	{
-		for (i = 1; i < argc; i++)
+		toInt = atoi(argv[i]);
+		if (toInt == 0)
 		{
-			toInt = atoi(argv[i]);
-			if (toInt == 0)
-			{
-				printf("Error\n");
-				exit(EXIT_FAILURE);
-			}
-			sum += toInt;
+			printf("Error\n");
+			exit(EXIT_SUCCESS);
 		}
-		printf("%d\n", sum);
+		sum += toInt;
 	}
+	printf("%d\n", sum);
 	exit(EXIT_SUCCESS);
 }
