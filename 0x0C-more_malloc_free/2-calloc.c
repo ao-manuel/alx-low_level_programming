@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -13,11 +13,20 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	
-	if (nmemb = 0 || size = 0)
+	unsigned int i;
+
+	if (nmemb == 0 || size == 0)
 		return (NULL);
+
 	void *pcalloc = malloc(nmemb * size);
+
 	if (pcalloc == NULL)
+	{
 		return (NULL);
+	}
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		pcalloc[i] = 0;
+	}
 	return (pcalloc);
 }
