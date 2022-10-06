@@ -13,12 +13,13 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	char* pcalloc;
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	void *pcalloc = malloc(nmemb * size);
+	pcalloc = malloc(nmemb * size);
 
 	if (pcalloc == NULL)
 	{
